@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E1BB7FF62CD6F53300F2B683 /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = E1BB7FF52CD6F53300F2B683 /* SwiftfulRouting */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		E141AC462CD1AE5300998C95 /* AuxilioEmergencial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AuxilioEmergencial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1BB7FF62CD6F53300F2B683 /* SwiftfulRouting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +73,7 @@
 				E141AC422CD1AE5300998C95 /* Sources */,
 				E141AC432CD1AE5300998C95 /* Frameworks */,
 				E141AC442CD1AE5300998C95 /* Resources */,
+				E141AC5C2CD1AE6900998C95 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -78,6 +84,7 @@
 			);
 			name = AuxilioEmergencial;
 			packageProductDependencies = (
+				E1BB7FF52CD6F53300F2B683 /* SwiftfulRouting */,
 			);
 			productName = AuxilioEmergencial;
 			productReference = E141AC462CD1AE5300998C95 /* AuxilioEmergencial.app */;
@@ -104,9 +111,13 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = E141AC3D2CD1AE5300998C95;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E1BB7FF42CD6F53300F2B683 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E141AC472CD1AE5300998C95 /* Products */;
 			projectDirPath = "";
@@ -126,6 +137,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E141AC5C2CD1AE6900998C95 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E141AC422CD1AE5300998C95 /* Sources */ = {
@@ -149,6 +181,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AuxilioEmergencial/Preview Content\"";
 				DEVELOPMENT_TEAM = 4DLN7FPJ74;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AuxilioEmergencial/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -180,6 +213,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"AuxilioEmergencial/Preview Content\"";
 				DEVELOPMENT_TEAM = 4DLN7FPJ74;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AuxilioEmergencial/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -259,6 +293,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -315,6 +350,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -341,6 +377,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E1BB7FF42CD6F53300F2B683 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulRouting";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E1BB7FF52CD6F53300F2B683 /* SwiftfulRouting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E1BB7FF42CD6F53300F2B683 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */;
+			productName = SwiftfulRouting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E141AC3E2CD1AE5300998C95 /* Project object */;
 }
