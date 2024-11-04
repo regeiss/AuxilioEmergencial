@@ -1,7 +1,27 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "ativo " : {
 
+    },
+    "Comece aqui" : {
+
+    },
+    "Desnev" : {
+
+    },
+    "Em desenvolvimento" : {
+
+    },
+    "Home 2" : {
+
+    },
+    "HomeTileView" : {
+
+    },
+    "User" : {
+
+    }
   },
   "version" : "1.0"
 }

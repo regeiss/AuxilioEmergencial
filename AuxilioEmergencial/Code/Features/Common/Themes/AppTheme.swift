@@ -45,4 +45,3 @@ class ToolBarTheme
         UINavigationBar.appearance().tintColor = tintColor ?? titleColor ?? .black
     }
 }
-

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E19B95572CD7DC7000E0AF1F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E19B95562CD7DC7000E0AF1F /* Alamofire */; };
 		E1BB7FF62CD6F53300F2B683 /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = E1BB7FF52CD6F53300F2B683 /* SwiftfulRouting */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1BB7FF62CD6F53300F2B683 /* SwiftfulRouting in Frameworks */,
+				E19B95572CD7DC7000E0AF1F /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,7 @@
 			name = AuxilioEmergencial;
 			packageProductDependencies = (
 				E1BB7FF52CD6F53300F2B683 /* SwiftfulRouting */,
+				E19B95562CD7DC7000E0AF1F /* Alamofire */,
 			);
 			productName = AuxilioEmergencial;
 			productReference = E141AC462CD1AE5300998C95 /* AuxilioEmergencial.app */;
@@ -117,6 +120,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				E1BB7FF42CD6F53300F2B683 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
+				E19B95552CD7DC7000E0AF1F /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E141AC472CD1AE5300998C95 /* Products */;
@@ -379,6 +383,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		E19B95552CD7DC7000E0AF1F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.1;
+			};
+		};
 		E1BB7FF42CD6F53300F2B683 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulRouting";
@@ -390,6 +402,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E19B95562CD7DC7000E0AF1F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E19B95552CD7DC7000E0AF1F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		E1BB7FF52CD6F53300F2B683 /* SwiftfulRouting */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E1BB7FF42CD6F53300F2B683 /* XCRemoteSwiftPackageReference "SwiftfulRouting" */;
