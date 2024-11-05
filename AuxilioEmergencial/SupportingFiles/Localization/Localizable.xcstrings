@@ -1,6 +1,12 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Abrigos" : {
+
+    },
+    "Ajustes" : {
+
+    },
     "ativo " : {
 
     },
@@ -13,13 +19,16 @@
     "Em desenvolvimento" : {
 
     },
-    "Home 2" : {
+    "Home" : {
 
     },
     "HomeTileView" : {
 
     },
-    "User" : {
+    "Perfil" : {
+
+    },
+    "Responsáveis" : {
 
     }
   },

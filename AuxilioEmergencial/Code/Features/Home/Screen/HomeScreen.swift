@@ -12,6 +12,13 @@ struct HomeScreen: View
 {
     var body: some View
     {
-        Text("Home 2")
+        RouterView { _ in
+            ScrollView
+            {
+                Text("Em desenvolvimento")
+            }
+            .navigationTitle("Home")
+            .navigationBarTitleDisplayMode(.large)
+        }
     }
 }

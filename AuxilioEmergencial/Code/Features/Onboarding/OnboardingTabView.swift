@@ -11,10 +11,11 @@ struct OnboardingTabView: View
 {
     @Environment(\.dismiss) var dismiss
     @AppStorage("needsAppOnboarding") var needsAppOnboarding: Bool?
-
+    @State private var isAnimating: Bool = false
+    
     var data: OnboardingData
 
-    @State private var isAnimating: Bool = false
+    
 
     var body: some View
     {

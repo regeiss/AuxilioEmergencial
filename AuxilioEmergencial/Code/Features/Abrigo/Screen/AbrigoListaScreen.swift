@@ -6,11 +6,19 @@
 //
 
 import SwiftUI
+import SwiftfulRouting
 
 struct AbrigoListaScreen: View
 {
     var body: some View
     {
-        Text("Em desenvolvimento")
+        RouterView { _ in
+            ScrollView
+            {
+                Text("Em desenvolvimento")
+            }
+            .navigationTitle("Abrigos")
+            .navigationBarTitleDisplayMode(.large)
+        }
     }
 }

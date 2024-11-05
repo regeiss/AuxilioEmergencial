@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftfulRouting
 
 struct AjustesScreen: View
 {
@@ -15,7 +16,14 @@ struct AjustesScreen: View
     
     var body: some View
     {
-       Text("Em desenvolvimento")
+        RouterView { _ in
+            ScrollView
+            {
+                Text("Em desenvolvimento")
+            }
+            .navigationTitle("Ajustes")
+            .navigationBarTitleDisplayMode(.large)
+        }
         
     }
 }

@@ -6,11 +6,19 @@
 //
 
 import SwiftUI
+import SwiftfulRouting
 
 struct UserProfileView: View
 {
     var body: some View
     {
-        Text("User")
+        RouterView { _ in
+            ScrollView
+            {
+                Text("Em desenvolvimento")
+            }
+            .navigationTitle("Perfil")
+            .navigationBarTitleDisplayMode(.large)
+        }
     }
 }
