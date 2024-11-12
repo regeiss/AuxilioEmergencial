@@ -22,12 +22,11 @@ struct ResponsavelListaScreen: View
     {
         RouterView { _ in
             
-            
-            List(viewModel.responsaveis) { responsavei in
+            List(viewModel.responsaveis) { responsaveis in
                 VStack(alignment: .leading) {
-                    Text(responsavei.title)
+                    Text(responsaveis.nome)
                         .font(.headline)
-                    Text(responsavei.body)
+                    Text(responsaveis.email)
                         .font(.subheadline)
                 }
             }

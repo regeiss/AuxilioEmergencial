@@ -10,12 +10,12 @@ import Alamofire
 
 class ResponsavelViewModel: ObservableObject
 {
-    @Published var responsaveis: [ResponsavelModel] = []
+    @Published var responsaveis: [Responsavel] = []
     
     func fetchPosts()
     {
-        AF.request("https://jsonplaceholder.typicode.com/posts")
-            .responseDecodable(of: [ResponsavelModel].self) { response in
+        AF.request("https://jsonplaceholder.typicode.com/users")
+            .responseDecodable(of: [Responsavel].self) { response in
                 switch response.result {
                     case .success(let responsaveis):
                         self.responsaveis = responsaveis

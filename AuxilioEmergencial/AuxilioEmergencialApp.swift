@@ -25,7 +25,7 @@ struct AuxilioEmergencialApp: App
             {
                 case .active:
                     print("active")
-                    //                prepareAppContext()
+                    prepareAppContext()
                     setAppVars()
                 case .inactive:
                     print("inactive")
@@ -47,4 +47,10 @@ struct AuxilioEmergencialApp: App
     {
         
     }
+    
+    func prepareAppContext()
+    {
+        
+    }
+    
 }
