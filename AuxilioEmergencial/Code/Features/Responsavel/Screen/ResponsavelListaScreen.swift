@@ -9,8 +9,7 @@ import SwiftUI
 import SwiftfulRouting
 import os
 
-struct ResponsavelListaScreen: View
-{
+struct ResponsavelListaScreen: View {
     @ObservedObject var viewModel = ResponsavelViewModel()
     
     private static let logger = Logger(
@@ -18,21 +17,17 @@ struct ResponsavelListaScreen: View
         category: String(describing: ResponsavelViewModel.self)
     )
     
-    var body: some View
-    {
+    var body: some View {
         RouterView { _ in
-            
             List(viewModel.responsaveis) { responsaveis in
-                VStack(alignment: .leading) {
-                    Text(responsaveis.nome)
-                        .font(.headline)
-                    Text(responsaveis.email)
-                        .font(.subheadline)
-                }
+                ResponsavelListaView(responsaveis: responsaveis
+                )
             }
+            .listStyle(.plain)
             .onAppear(perform: viewModel.fetchPosts)
             .navigationTitle("Responsáveis")
             .navigationBarTitleDisplayMode(.large)
         }
     }
 }
+

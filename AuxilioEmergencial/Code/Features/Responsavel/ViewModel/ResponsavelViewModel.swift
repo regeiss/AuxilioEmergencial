@@ -8,12 +8,12 @@
 import Foundation
 import Alamofire
 
-class ResponsavelViewModel: ObservableObject
-{
+class ResponsavelViewModel: ObservableObject {
+    
     @Published var responsaveis: [Responsavel] = []
     
-    func fetchPosts()
-    {
+    func fetchPosts() {
+    
         AF.request("https://jsonplaceholder.typicode.com/users")
             .responseDecodable(of: [Responsavel].self) { response in
                 switch response.result {
@@ -21,6 +21,7 @@ class ResponsavelViewModel: ObservableObject
                         self.responsaveis = responsaveis
                     case .failure(let error):
                         print(error.localizedDescription)
+                        debugPrint(response)
                 }
             }
     }

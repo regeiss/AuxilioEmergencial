@@ -19,6 +19,7 @@ struct AuxilioEmergencialApp: App
         {
             ContentView()
         }
+        .modelContainer(for: AjustesModel.self)
         .onChange(of: scenePhase)
         {
             switch scenePhase
@@ -45,7 +46,13 @@ struct AuxilioEmergencialApp: App
     
     func setAppVars()
     {
-        
+        do {
+            let container = try ModelContainer(
+                for: AjustesModel.self)
+                //...more code to come
+        } catch {
+            fatalError("Failed to create container")
+        }
     }
     
     func prepareAppContext()

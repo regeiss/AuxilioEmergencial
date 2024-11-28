@@ -7,11 +7,11 @@
 
 import Foundation
 
-// MARK: - Responsavel //Element
+// MARK: - ResponsavelElement
 struct ResponsavelElement: Decodable, Identifiable
 {
     var id: Int
-    var nome, username, email: String
+    var name, username, email: String
     var address: Address
     var phone, website: String
     var company: Company
