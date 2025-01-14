@@ -14,9 +14,6 @@ struct OnboardingTabView: View
     @State private var isAnimating: Bool = false
     
     var data: OnboardingData
-
-    
-
     var body: some View
     {
         VStack(spacing: 20)

@@ -9,21 +9,16 @@ import SwiftUI
 import SwiftData
 
 @main
-struct AuxilioEmergencialApp: App
-{
+struct AuxilioEmergencialApp: App {
     @Environment(\.scenePhase) private var scenePhase
     
-    var body: some Scene
-    {
-        WindowGroup
-        {
+    var body: some Scene {
+        WindowGroup {
             ContentView()
         }
         .modelContainer(for: AjustesModel.self)
-        .onChange(of: scenePhase)
-        {
-            switch scenePhase
-            {
+        .onChange(of: scenePhase) {
+            switch scenePhase {
                 case .active:
                     print("active")
                     prepareAppContext()
@@ -39,20 +34,18 @@ struct AuxilioEmergencialApp: App
         }
     }
     
-    func saveContext()
-    {
+    func saveContext() {
         
     }
     
-    func setAppVars()
-    {
-        do {
-            let container = try ModelContainer(
-                for: AjustesModel.self)
-                //...more code to come
-        } catch {
-            fatalError("Failed to create container")
-        }
+    func setAppVars() {
+//        do {
+//            let container = try ModelContainer(
+//                for: AjustesModel.self)
+//                //...more code to come
+//        } catch {
+//            fatalError("Failed to create container")
+//        }
     }
     
     func prepareAppContext()

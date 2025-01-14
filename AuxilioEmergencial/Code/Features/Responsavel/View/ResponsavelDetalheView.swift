@@ -36,7 +36,7 @@ struct ResponsavelDetalheView: View {
             let lat = Double(responsaveis.address.geo.lat) ?? 0
             let lng = Double(responsaveis.address.geo.lng) ?? 0
             
-            let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: lat, longitude: lng), span:  MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+            let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: lat, longitude: lng), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
                                         
             router.showScreen(.push) { _ in
                 ResponsavelLocalizacaoView(region: region)
